@@ -1,0 +1,10 @@
+﻿  NameCard.cpp
+d:\github\hyunjunglee\c_자료구조\코드\문제제출문서\chapter_2\chapter2문제_문제2\namecard\namecard\namecard.cpp(7): warning C4996: 'strcpy': This function or variable may be unsafe. Consider using strcpy_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+  c:\program files (x86)\windows kits\10\include\10.0.18362.0\ucrt\string.h(133): note: 'strcpy' 선언을 참조하십시오.
+d:\github\hyunjunglee\c_자료구조\코드\문제제출문서\chapter_2\chapter2문제_문제2\namecard\namecard\namecard.cpp(8): warning C4996: 'strcpy': This function or variable may be unsafe. Consider using strcpy_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+  c:\program files (x86)\windows kits\10\include\10.0.18362.0\ucrt\string.h(133): note: 'strcpy' 선언을 참조하십시오.
+d:\github\hyunjunglee\c_자료구조\코드\문제제출문서\chapter_2\chapter2문제_문제2\namecard\namecard\namecard.cpp(26): warning C4996: 'strcpy': This function or variable may be unsafe. Consider using strcpy_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+  c:\program files (x86)\windows kits\10\include\10.0.18362.0\ucrt\string.h(133): note: 'strcpy' 선언을 참조하십시오.
+  main.cpp
+  코드를 생성하고 있습니다...
+  NameCard.vcxproj -> D:\Github\Hyunjunglee\C_자료구조\코드\문제제출문서\Chapter_2\Chapter2문제_문제2\NameCard\Debug\NameCard.exe
