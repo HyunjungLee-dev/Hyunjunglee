@@ -1,0 +1,2 @@
+#TargetFrameworkVersion=v4.0:PlatformToolSet=v141:EnableManagedIncrementalBuild=false:VCToolArchitecture=Native32Bit:WindowsTargetPlatformVersion=10.0.18362.0
+Debug|Win32|D:\Github\Hyunjunglee\C_자료구조\코드\문제제출문서\Chapter_2\Chapter2_단순연결리스트\DLinkedList_PointSort\DLinkedList_Point\|
