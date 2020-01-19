@@ -1,0 +1,10 @@
+﻿  DutyMain.cpp
+d:\github\hyunjunglee\c_자료구조\코드\문제제출문서\chapter_2\chapter2_원형 연결 리스트\circularlinkedlist\circularlinkedlist\dutymain.cpp(19): warning C4996: 'strcpy': This function or variable may be unsafe. Consider using strcpy_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+  c:\program files (x86)\windows kits\10\include\10.0.18362.0\ucrt\string.h(133): note: 'strcpy' 선언을 참조하십시오.
+d:\github\hyunjunglee\c_자료구조\코드\문제제출문서\chapter_2\chapter2_원형 연결 리스트\circularlinkedlist\circularlinkedlist\dutymain.cpp(24): warning C4996: 'strcpy': This function or variable may be unsafe. Consider using strcpy_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+  c:\program files (x86)\windows kits\10\include\10.0.18362.0\ucrt\string.h(133): note: 'strcpy' 선언을 참조하십시오.
+d:\github\hyunjunglee\c_자료구조\코드\문제제출문서\chapter_2\chapter2_원형 연결 리스트\circularlinkedlist\circularlinkedlist\dutymain.cpp(29): warning C4996: 'strcpy': This function or variable may be unsafe. Consider using strcpy_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+  c:\program files (x86)\windows kits\10\include\10.0.18362.0\ucrt\string.h(133): note: 'strcpy' 선언을 참조하십시오.
+d:\github\hyunjunglee\c_자료구조\코드\문제제출문서\chapter_2\chapter2_원형 연결 리스트\circularlinkedlist\circularlinkedlist\dutymain.cpp(34): warning C4996: 'strcpy': This function or variable may be unsafe. Consider using strcpy_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+  c:\program files (x86)\windows kits\10\include\10.0.18362.0\ucrt\string.h(133): note: 'strcpy' 선언을 참조하십시오.
+  CircularLinkedList.vcxproj -> D:\Github\Hyunjunglee\C_자료구조\코드\문제제출문서\Chapter_2\Chapter2_원형 연결 리스트\CircularLinkedList\Debug\CircularLinkedList.exe
