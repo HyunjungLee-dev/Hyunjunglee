@@ -29,7 +29,7 @@ void LInsertFront(List * plist, Data data)
 	(plist->numOfData)++;
 }
 
-void LInsert(List * plist, Data data)
+void LInsert(List * plist, const Data data)
 {
 	Node * newNode = (Node*)malloc(sizeof(Node));
 	newNode->data = data;
