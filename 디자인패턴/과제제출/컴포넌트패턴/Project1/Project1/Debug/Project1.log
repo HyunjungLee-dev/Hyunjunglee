@@ -1,0 +1,20 @@
+﻿  GameManager.cpp
+d:\git\hyunjunglee\디자인패턴\과제제출\컴포넌트패턴\project1\project1\mapdraw.h(19): warning C4838: 'int'에서 'SHORT'(으)로의 변환에는 축소 변환이 필요합니다.
+d:\git\hyunjunglee\디자인패턴\과제제출\컴포넌트패턴\project1\project1\gamemanager.cpp(11): warning C4244: '인수': 'double'에서 'int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+d:\git\hyunjunglee\디자인패턴\과제제출\컴포넌트패턴\project1\project1\gamemanager.cpp(12): warning C4244: '인수': 'double'에서 'int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+d:\git\hyunjunglee\디자인패턴\과제제출\컴포넌트패턴\project1\project1\gamemanager.cpp(13): warning C4244: '인수': 'double'에서 'int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+d:\git\hyunjunglee\디자인패턴\과제제출\컴포넌트패턴\project1\project1\gamemanager.cpp(14): warning C4244: '인수': 'double'에서 'int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+d:\git\hyunjunglee\디자인패턴\과제제출\컴포넌트패턴\project1\project1\gamemanager.cpp(31): warning C4244: '초기화 중': 'double'에서 'int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+d:\git\hyunjunglee\디자인패턴\과제제출\컴포넌트패턴\project1\project1\gamemanager.cpp(36): warning C4244: '인수': 'double'에서 'int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+d:\git\hyunjunglee\디자인패턴\과제제출\컴포넌트패턴\project1\project1\gamemanager.cpp(37): warning C4244: '인수': 'double'에서 'int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+d:\git\hyunjunglee\디자인패턴\과제제출\컴포넌트패턴\project1\project1\gamemanager.cpp(46): warning C4244: '인수': 'double'에서 'int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+d:\git\hyunjunglee\디자인패턴\과제제출\컴포넌트패턴\project1\project1\gamemanager.cpp(47): warning C4996: 'getch': The POSIX name for this item is deprecated. Instead, use the ISO C and C++ conformant name: _getch. See online help for details.
+  c:\program files (x86)\windows kits\10\include\10.0.18362.0\ucrt\conio.h(453): note: 'getch' 선언을 참조하십시오.
+d:\git\hyunjunglee\디자인패턴\과제제출\컴포넌트패턴\project1\project1\gamemanager.cpp(68): warning C4244: '인수': 'double'에서 'int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+d:\git\hyunjunglee\디자인패턴\과제제출\컴포넌트패턴\project1\project1\gamemanager.cpp(76): warning C4244: '인수': 'double'에서 'int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+d:\git\hyunjunglee\디자인패턴\과제제출\컴포넌트패턴\project1\project1\gamemanager.cpp(80): warning C4244: '인수': 'double'에서 'int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+d:\git\hyunjunglee\디자인패턴\과제제출\컴포넌트패턴\project1\project1\gamemanager.cpp(65): warning C4996: 'sprintf': This function or variable may be unsafe. Consider using sprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+  c:\program files (x86)\windows kits\10\include\10.0.18362.0\ucrt\stdio.h(1774): note: 'sprintf' 선언을 참조하십시오.
+d:\git\hyunjunglee\디자인패턴\과제제출\컴포넌트패턴\project1\project1\gamemanager.cpp(81): warning C4996: 'getch': The POSIX name for this item is deprecated. Instead, use the ISO C and C++ conformant name: _getch. See online help for details.
+  c:\program files (x86)\windows kits\10\include\10.0.18362.0\ucrt\conio.h(453): note: 'getch' 선언을 참조하십시오.
+  Project1.vcxproj -> D:\Git\Hyunjunglee\디자인패턴\과제제출\컴포넌트패턴\Project1\Debug\Project1.exe
