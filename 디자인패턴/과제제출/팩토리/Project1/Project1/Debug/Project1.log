@@ -1,0 +1,9 @@
+﻿  Main.cpp
+d:\git\hyunjunglee\디자인패턴\과제제출\팩토리\project1\project1\main.cpp(5): warning C4326: 'main'의 반환 형식이 'int'이어야 하는데 'void'입니다.
+  MapSite.cpp
+  Maze.cpp
+  MazeFactory.cpp
+  MazeGame.cpp
+  코드를 생성하고 있습니다...
+d:\git\hyunjunglee\디자인패턴\과제제출\팩토리\project1\project1\maze.cpp(25): warning C4715: 'Maze::RoomNo': 모든 제어 경로에서 값을 반환하지는 않습니다.
+  Project1.vcxproj -> D:\Git\Hyunjunglee\디자인패턴\과제제출\팩토리\Project1\Debug\Project1.exe
