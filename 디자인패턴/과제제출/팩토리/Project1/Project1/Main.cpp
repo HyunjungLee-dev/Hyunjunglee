@@ -16,3 +16,8 @@ void main()
 	delete factory;
 //	delete Bfactory;
 }
+
+/*maze, wall, door, room 
+room은 wall이나 door로 되어 있음
+room과 room은 door로 이어져있다
+maze는 복수의 room을 가짐*/
