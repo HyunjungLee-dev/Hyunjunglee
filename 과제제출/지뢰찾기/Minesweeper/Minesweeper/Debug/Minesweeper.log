@@ -1,0 +1,14 @@
+﻿  Minesweeper.cpp
+d:\github\minesweeper\minesweeper\minesweeper\mecro.h(12): warning C4838: 'int'에서 'SHORT'(으)로의 변환에는 축소 변환이 필요합니다.
+d:\github\minesweeper\minesweeper\minesweeper\minesweeper.cpp(40): warning C4244: '초기화 중': 'double'에서 'int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+d:\github\minesweeper\minesweeper\minesweeper\minesweeper.cpp(41): warning C4244: '초기화 중': 'double'에서 'int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+d:\github\minesweeper\minesweeper\minesweeper\minesweeper.cpp(89): warning C4244: '초기화 중': 'double'에서 'int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+d:\github\minesweeper\minesweeper\minesweeper\minesweeper.cpp(90): warning C4244: '초기화 중': 'double'에서 'int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+d:\github\minesweeper\minesweeper\minesweeper\minesweeper.cpp(114): warning C4244: '초기화 중': 'double'에서 'int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+d:\github\minesweeper\minesweeper\minesweeper\minesweeper.cpp(115): warning C4244: '초기화 중': 'double'에서 'int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+d:\github\minesweeper\minesweeper\minesweeper\minesweeper.cpp(131): warning C4244: '초기화 중': 'double'에서 'int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+d:\github\minesweeper\minesweeper\minesweeper\minesweeper.cpp(132): warning C4244: '초기화 중': 'double'에서 'int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+d:\github\minesweeper\minesweeper\minesweeper\minesweeper.cpp(142): warning C4996: 'getch': The POSIX name for this item is deprecated. Instead, use the ISO C and C++ conformant name: _getch. See online help for details.
+  c:\program files (x86)\windows kits\10\include\10.0.17763.0\ucrt\conio.h(453): note: 'getch' 선언을 참조하십시오.
+d:\github\minesweeper\minesweeper\minesweeper\minesweeper.cpp(148): warning C4101: 'End' :참조되지 않은 지역 변수입니다.
+  Minesweeper.vcxproj -> D:\Github\Minesweeper\Minesweeper\Debug\Minesweeper.exe
