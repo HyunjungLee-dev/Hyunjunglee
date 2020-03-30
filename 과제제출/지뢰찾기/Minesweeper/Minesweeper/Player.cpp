@@ -19,8 +19,8 @@ void Player::Control(int w, int h, Map* map)
 {
 		int ch = getch();
 		if (ch == ENTER)
-		{
-				if (map->CheckBlock(m_ix, m_iy) == false)
+		{				
+			if (map->CheckBlock(m_ix, m_iy,w,h) == false)
 					m_bGOver =  true;
 		}
 		if (ch == SPACE)
