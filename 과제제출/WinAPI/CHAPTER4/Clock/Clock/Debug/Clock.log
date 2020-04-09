@@ -1,0 +1,4 @@
+﻿  Clock.cpp
+d:\github\academy\과제제출\winapi\chapter4\clock\clock\clock.cpp(73): warning C4244: '=': 'double'에서 'int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+d:\github\academy\과제제출\winapi\chapter4\clock\clock\clock.cpp(74): warning C4244: '=': 'double'에서 'int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+  Clock.vcxproj -> D:\Github\academy\과제제출\WinAPI\CHAPTER4\Clock\Debug\Clock.exe
