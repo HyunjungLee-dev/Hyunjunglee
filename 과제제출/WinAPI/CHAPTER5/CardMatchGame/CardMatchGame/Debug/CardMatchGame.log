@@ -1,0 +1,6 @@
+﻿  CardMatchGame.cpp
+d:\20200419\cardmatchgame\cardmatchgame\cardmatchgame.cpp(26): warning C4244: '인수': 'double'에서 'int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+d:\20200419\cardmatchgame\cardmatchgame\cardmatchgame.cpp(42): warning C4805: '==': 연산에 'BOOL' 형식과 'bool' 형식을 함께 사용하는 것은 안전하지 않습니다.
+  WinMaincpp.cpp
+  코드를 생성하고 있습니다...
+  CardMatchGame.vcxproj -> D:\20200419\CardMatchGame\Debug\CardMatchGame.exe
