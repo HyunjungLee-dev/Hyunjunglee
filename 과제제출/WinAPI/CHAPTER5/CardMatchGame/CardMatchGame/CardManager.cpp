@@ -4,6 +4,7 @@
 
 CardManager::CardManager()
 {
+	MatchIndexInit();
 }
 
 void CardManager::Init()
@@ -82,9 +83,12 @@ bool CardManager::AllCardCheck(POINT POS, MATCH count)
 	{
 		if (Cardlist[i]->CardCheck(POS) == true)
 		{
-			Cardlist[i]->SetState(CARDSTATE_MATCH);
-			MatchIndex[count] = Cardlist[i];
-			return true;
+			if (Cardlist[i]->GetCardState() != CARDSTATE_OPEN)
+			{
+				Cardlist[i]->SetState(CARDSTATE_MATCH);
+				MatchIndex[count] = Cardlist[i];
+				return true;
+			}
 		}
 	}
 	return false;
@@ -96,6 +100,7 @@ bool CardManager::MatchCard()
 	{
 		MatchIndex[MATCH_FIRST]->SetState(CARDSTATE_OPEN);
 		MatchIndex[MATCH_SECOND]->SetState(CARDSTATE_OPEN);
+		MatchIndexInit();
 		return true;
 	}
 	else
@@ -108,6 +113,7 @@ void CardManager::MatchCardClose()
 	MatchIndex[MATCH_SECOND]->SetState(CARDSTATE_CLOSE);
 }
 
+
 bool CardManager::AllMatchClear()
 {
 	for (int i = 0; i < CARD_MAX; i++)
@@ -117,6 +123,22 @@ bool CardManager::AllMatchClear()
 	}
 	return true;
 
+}
+
+void CardManager::MatchIndexInit()
+{
+	for(int i = 0; i < MATCH_END; i++)
+	{
+		MatchIndex[i] = NULL;
+	}
+}
+
+bool CardManager::MatchNullCheck(MATCH index)
+{
+	if (MatchIndex[index] != NULL)
+		return false;
+	else
+		return true;
 }
 
 CardManager::~CardManager()

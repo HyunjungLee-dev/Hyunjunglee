@@ -17,7 +17,9 @@ public:
 	bool MatchCard();
 	void MatchCardClose();
 	bool AllMatchClear();
-	Card* GetMatchIndex(MATCH count) { return MatchIndex[count]; }
+	void MatchIndexInit();
+	bool MatchNullCheck(MATCH index);
+	Card* GetMatchIndex(MATCH index) { return MatchIndex[index]; }
 	CardManager();
 	~CardManager();
 };

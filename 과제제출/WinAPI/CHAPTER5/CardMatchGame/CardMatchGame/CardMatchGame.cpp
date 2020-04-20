@@ -53,40 +53,52 @@ void CardMatchGame::StartGame(HWND hWnd, POINT point)
 }
 
 void CardMatchGame::PlayGame(HWND hWnd, POINT point)
-{	
-	if (m_CardManager.AllCardCheck(point, m_iCardCount) == true)
-	{
-		switch (m_iCardCount)
-		{
-		case MATCH_FIRST:
-			InvalidateRect(hWnd, &m_CardManager.GetMatchIndex(m_iCardCount)->GetCardRect(), true);
-			m_iCardCount = MATCH_SECOND;
-			break;
-		case MATCH_SECOND:
-			InvalidateRect(hWnd, &m_CardManager.GetMatchIndex(m_iCardCount)->GetCardRect(), true);
-			if (!m_CardManager.MatchCard())
-			{
-				m_iCardCount = MATCH_ING;
-				SetTimer(hWnd, 1, 1000, NULL);
-			}
-			else
-			{
-				m_iCardCount = MATCH_FIRST;
-				if (m_CardManager.AllMatchClear() == true)
-				{
-					TCHAR text[126];
-					wsprintf(text, TEXT("게임 클리어 \n걸린 시간  %d시간 %d분 %d초"),m_PlayTime.hour, m_PlayTime.min, m_PlayTime.sec);
-					if (MessageBox(hWnd, text, TEXT("카드매치"), MB_OK) == IDOK)
-						SendMessage(hWnd, WM_DESTROY, 0, 0);
-				}
-			}
-			break;
-		default:
-			break;
-		}
+{	   //두개가 match중일때는 다른 카드 선택 안되도록.
 
+	switch (m_iCardCount)
+	{
+	case MATCH_FIRST:
+		if (m_CardManager.MatchNullCheck(MATCH_FIRST))
+		{
+			if (m_CardManager.AllCardCheck(point, m_iCardCount) == true)
+			{
+				InvalidateRect(hWnd, &m_CardManager.GetMatchIndex(m_iCardCount)->GetCardRect(), true);
+				m_iCardCount = MATCH_SECOND;
+			}
+		}
+		break;
+	case MATCH_SECOND:
+		if (m_CardManager.MatchNullCheck(MATCH_SECOND))
+		{
+			if (m_CardManager.AllCardCheck(point, m_iCardCount) == true)
+			{
+				InvalidateRect(hWnd, &m_CardManager.GetMatchIndex(m_iCardCount)->GetCardRect(), true);
+				if (!m_CardManager.MatchCard())
+				{
+					SetTimer(hWnd, 1, 1000, NULL);
+				}
+				else
+				{
+					if (m_CardManager.AllMatchClear() == true)
+					{
+						TCHAR text[126];
+						wsprintf(text, TEXT("게임 클리어 \n걸린 시간  %d시간 %d분 %d초"), m_PlayTime.hour, m_PlayTime.min, m_PlayTime.sec);
+						if (MessageBox(hWnd, text, TEXT("카드매치"), MB_OK) == IDOK)
+							SendMessage(hWnd, WM_DESTROY, 0, 0);
+					}
+				}
+				m_iCardCount = MATCH_FIRST;
+				break;
+			}
+	default:
+		break;
+		}
 	}
+		
+
 }
+
+
 
 
 void CardMatchGame::TimeCloseCard(HWND hWnd)
@@ -94,6 +106,7 @@ void CardMatchGame::TimeCloseCard(HWND hWnd)
 	m_CardManager.MatchCardClose();
 	InvalidateRect(hWnd, &m_CardManager.GetMatchIndex(MATCH_FIRST)->GetCardRect(), true);
 	InvalidateRect(hWnd, &m_CardManager.GetMatchIndex(MATCH_SECOND)->GetCardRect(), true);
+	m_CardManager.MatchIndexInit();
 	m_iCardCount = MATCH_FIRST;
 }
 

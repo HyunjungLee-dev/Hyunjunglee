@@ -23,7 +23,7 @@
     <ProjectGuid>{41627A68-EBC4-45C6-A528-5B05425FFBB0}</ProjectGuid>
     <Keyword>Win32Proj</Keyword>
     <RootNamespace>CardMatchGame</RootNamespace>
-    <WindowsTargetPlatformVersion>10.0.18362.0</WindowsTargetPlatformVersion>
+    <WindowsTargetPlatformVersion>10.0.17763.0</WindowsTargetPlatformVersion>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
