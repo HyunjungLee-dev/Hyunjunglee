@@ -85,6 +85,14 @@ void ChessPiece::SetPieceListPos(int x, int y)
 	}
 }
 
+void ChessPiece::SetAllMovable(bool b)
+{
+	for (vector<Piece*>::iterator it = ChessPieceList.begin(); it != ChessPieceList.end(); it++)
+	{
+		(*it)->SetMovable(b);
+	}
+}
+
 void ChessPiece::SetColor(int index)	//개별 피스의 색상 
 {
 	ChessPieceList[index]->SetImgColor(m_ePieceColor);
@@ -92,7 +100,6 @@ void ChessPiece::SetColor(int index)	//개별 피스의 색상
 
 Piece* ChessPiece::SetMoveRange(POINT point, vector<Piece*> v)
 {
-
 	for (vector<Piece*>::iterator it = ChessPieceList.begin(); it != ChessPieceList.end(); it++)
 	{
 		if (PtInRect(&(*it)->GetRect(), point))//
@@ -105,10 +112,10 @@ Piece* ChessPiece::SetMoveRange(POINT point, vector<Piece*> v)
 
 void ChessPiece::PieceListDraw(HDC hdc)
 {
-	for (vector<Piece*>::iterator it = ChessPieceList.begin(); it != ChessPieceList.end(); it++)
-	{
-		(*it)->Draw(hdc);
-	}
+for (vector<Piece*>::iterator it = ChessPieceList.begin(); it != ChessPieceList.end(); it++)
+{
+	(*it)->Draw(hdc);
+}
 }
 
 POINT ChessPiece::GetPiecePos(int index)
@@ -144,11 +151,81 @@ Piece* ChessPiece::AddPiece(PIECETYPE Type)
 	}
 }
 
+void ChessPiece::CheckAllPieceMovable(POINT point, vector<Piece*> v, POINT point2)
+{
+	vector<Piece*> temp;
+	Piece* king = GetKingPiece();
+	vector<POINT> kingRange = king->GetRange();
+	bool btmp = false;
+
+
+	for (vector<Piece*>::iterator it = ChessPieceList.begin(); it != ChessPieceList.end(); it++)
+	{
+		(*it)->SetMoveRange(v);
+		vector<POINT> tmp = (*it)->GetMovableRange();
+		for (vector<POINT>::iterator iter = tmp.begin(); iter != tmp.end(); iter++)
+		{
+			for (vector<POINT>::iterator kingp = kingRange.begin(); kingp != kingRange.end(); kingp++)
+			{
+				if (point2.x == (*kingp).x && point2.y == (*kingp).y)
+				{
+					btmp = true;
+				}
+				if ((*kingp).x == (*iter).x && (*kingp).y == (*iter).y)
+				{
+					if ( point.x == (*iter).x &&  point.y ==( *iter).y )
+					{
+					temp.push_back((*it));
+					(*it)->SetMovable(true);
+					break;
+					}
+			}
+			}
+		}
+	}
+
+	if (btmp)
+	{
+		for (vector<Piece*>::iterator iter = temp.begin(); iter != temp.end(); iter++)
+		{
+			vector<POINT> tmp = (*iter)->GetMovableRange();
+			for (vector<POINT>::iterator it = tmp.begin(); it != tmp.end(); it++)
+			{
+				if (point2.x == (*it).x && point2.y == (*it).y)
+				{
+					(*iter)->SetMovable(true);
+					break;
+				}
+				else
+					(*iter)->SetMovable(false);
+			}
+		}
+	}
+
+}
+
+bool ChessPiece::CheckAllPieceMovable()
+{
+	bool bHaveMovable;
+	for (vector<Piece*>::iterator it = ChessPieceList.begin(); it != ChessPieceList.end(); it++)
+	{
+
+		if ((*it)->GetMovable() == true)
+		{
+			bHaveMovable = true;
+			break;
+		}
+		else
+			bHaveMovable = false;
+	}
+	return bHaveMovable;
+}
+
 bool ChessPiece::SearchPiecePos(POINT point)
 {
 	for (vector<Piece*>::iterator it = ChessPieceList.begin(); it != ChessPieceList.end(); it++)
 	{
-		if (PtInRect(&(*it)->GetRect(), point))//
+		if (PtInRect(&(*it)->GetRect(), point))
 		{
 			return true;
 		}
@@ -197,6 +274,24 @@ void ChessPiece::UpgradePawn()
 
 }
 
+Piece* ChessPiece::GetKingPiece()
+{
+	PIECE piece;
+	if (m_ePieceColor == COLOR_W)
+		piece = PIECE_W_KING;
+	else
+		piece = PIECE_B_KING;
+
+	for (vector<Piece*>::iterator it = ChessPieceList.begin(); it != ChessPieceList.end(); it++)
+	{
+		if ((*it)->GetPieceType() == piece)
+		{
+			return (*it);
+		}
+	}
+}
+
+
 bool ChessPiece::SearchKing(POINT point)
 {
 	PIECE piece;
@@ -209,7 +304,7 @@ bool ChessPiece::SearchKing(POINT point)
 	{
 		if ((*it)->GetPieceType() == piece)
 		{
-			if ((*it)->GetPos().x ==point.x && (*it)->GetPos().y == point.y)//
+			if ((*it)->GetPos().x ==point.x && (*it)->GetPos().y == point.y)
 			{
 				return true;
 			}
@@ -217,6 +312,7 @@ bool ChessPiece::SearchKing(POINT point)
 	}
 	return false;
 }
+
 
 void ChessPiece::ErasePiece(Piece* piece)
 {

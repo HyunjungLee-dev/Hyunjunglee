@@ -18,6 +18,7 @@ void Piece::SetPos(int x, int y)
 	m_PieceRect.bottom = m_PieceRect.top + m_pBitmap->GetSize().cy*0.5;
 }
 
+
 void Piece::Draw(HDC hdc)
 {
 	m_pBitmap->Draw(hdc, pos.x, pos.y);
@@ -128,8 +129,6 @@ void King::SetMoveRange(vector<Piece*> v)
 	MovableRange.clear();
 	MoveRange.clear();
 
-	/*int x[] = { 1,0,1,-1,0,-1,1 - 1 };
-	int y[] = { 0 ,1,1,0,-1,-1,-1,1 };*/
 
 	MoveRange.push_back(RangePoint(0, 1 * IMG_HEIGHT));
 	MoveRange.push_back(RangePoint(1 * IMG_WIDTH, 0));
@@ -141,7 +140,7 @@ void King::SetMoveRange(vector<Piece*> v)
 	MoveRange.push_back(RangePoint(-1 * IMG_WIDTH, +1 * IMG_HEIGHT));
 
 	SetMovableRange(v);
-	MoveRange.clear();
+	UpdateKingRange(v);
 }
 
 void King::SetMovableRange(vector<Piece*> v)
@@ -152,6 +151,8 @@ void King::SetMovableRange(vector<Piece*> v)
 
 	for (auto it = MoveRange.begin(); it != MoveRange.end(); it++)
 	{
+		if ((*it).x < 0 || (*it).x >= 1000 || (*it).y < 0 || (*it).y >= 1000)
+			continue;
 		for (auto iter = v.begin(); iter != v.end(); iter++)
 		{
 			if ((*iter)->GetPos().x == (*it).x && ((*iter)->GetPos().y == (*it).y))
@@ -178,6 +179,37 @@ void King::SetMovableRange(vector<Piece*> v)
 		}
 		if (bCheck == true)
 			MovableRange.push_back((*it));
+	}
+}
+
+void King::UpdateKingRange(vector<Piece*> v)
+{
+	COLOR piece;
+	if (m_eColor == COLOR_W)
+		piece = COLOR_B;
+	else
+		piece = COLOR_W;
+
+	for (auto iter = v.begin(); iter != v.end(); iter++)
+	{
+		if ((*iter)->GetColor() == piece)
+		{
+			vector<POINT> point;
+			point = (*iter)->GetMovableRange();
+			for (auto it = point.begin(); it != point.end(); it++)
+			{
+				if (it == point.begin())
+					continue;
+				for (auto kingRange = MovableRange.begin(); kingRange != MovableRange.end(); kingRange++)
+				{
+					if ((*it).x == (*kingRange).x && (*it).y == (*kingRange).y)
+					{
+						MovableRange.erase(kingRange);
+						break;
+					}
+				}
+			}
+		}
 	}
 }
 

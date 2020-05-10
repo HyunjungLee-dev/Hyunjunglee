@@ -13,15 +13,19 @@ protected:
 	vector<POINT> MoveRange;
 	vector<POINT> MovableRange;
 	COLOR m_eColor;
+	bool m_bMovable;
 public:
 	void SetPos(int x, int y) ;
 	void Draw(HDC hdc) ; 
 	POINT GetPos() { return pos; }
 	RECT GetRect() { return m_PieceRect; }
-	vector<POINT> GetRange(){ return MovableRange; }
+	vector<POINT> GetMovableRange(){ return MovableRange; }
+	vector<POINT> GetRange() { return MoveRange; }
 	COLOR GetColor() { return m_eColor; }
 	POINT RangePoint(int x, int y);
 	PIECE GetPieceType() {return m_ePieceType;}
+	void SetMovable(bool b) { m_bMovable = b; }
+	bool GetMovable() {return m_bMovable;}
 	void RangelengthWidth(vector<Piece*> v);
 	void RangediagonalLine(vector<Piece* > v);
 	virtual void SetImgColor(COLOR color) = 0;
@@ -39,6 +43,7 @@ public:
 	virtual void SetImgColor(COLOR color);
 	virtual void SetMoveRange(vector<Piece*> v);
 	virtual void SetMovableRange(vector<Piece*> v);
+	void UpdateKingRange(vector<Piece*> v);
 	King();
 	virtual ~King() {};
 

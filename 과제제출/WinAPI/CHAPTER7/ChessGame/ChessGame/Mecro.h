@@ -81,6 +81,13 @@ enum BREAK
 
 };
 
+enum CHECK
+{
+	CHECKED,
+	CHECKING,
+	NOTCHECK,
+	CHECKMATE
+};
 
 #define IMG_WIDTH 125
 #define IMG_HEIGHT 125
