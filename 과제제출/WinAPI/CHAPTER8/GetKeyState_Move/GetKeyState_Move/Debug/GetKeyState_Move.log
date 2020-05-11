@@ -1,0 +1,7 @@
+﻿  BitMap.cpp
+  Character.cpp
+d:\github\std\과제제출\winapi\chapter8\getkeystate_move\getkeystate_move\character.cpp(80): warning C4244: '인수': 'float'에서 'int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+d:\github\std\과제제출\winapi\chapter8\getkeystate_move\getkeystate_move\character.cpp(99): warning C4244: '=': 'double'에서 'float'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+  WinMain.cpp
+  코드를 생성하고 있습니다...
+  GetKeyState_Move.vcxproj -> D:\Github\STD\과제제출\WinAPI\CHAPTER8\GetKeyState_Move\Debug\GetKeyState_Move.exe
