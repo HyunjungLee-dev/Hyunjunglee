@@ -1,0 +1,40 @@
+﻿  Bitmap.cpp
+c:\users\lee\desktop\minesweeper_winapi\minesweeper_winapi\bitmap.cpp(43): warning C4244: '인수': 'float'에서 'int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+  BitmapManager.cpp
+c:\users\lee\desktop\minesweeper_winapi\minesweeper_winapi\bitmapmanager.cpp(3): warning C4356: 'Singleton<BitmapManager>::_Singleton': 정적 데이터 멤버는 파생 클래스를 통해 초기화할 수 없습니다.
+  Block.cpp
+c:\users\lee\desktop\minesweeper_winapi\minesweeper_winapi\block.cpp(11): warning C4244: '=': 'int'에서 'float'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+c:\users\lee\desktop\minesweeper_winapi\minesweeper_winapi\block.cpp(12): warning C4244: '=': 'int'에서 'float'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+c:\users\lee\desktop\minesweeper_winapi\minesweeper_winapi\block.cpp(21): warning C4244: '=': 'float'에서 'LONG'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+c:\users\lee\desktop\minesweeper_winapi\minesweeper_winapi\block.cpp(22): warning C4244: '=': 'float'에서 'LONG'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+c:\users\lee\desktop\minesweeper_winapi\minesweeper_winapi\block.cpp(23): warning C4244: '=': 'float'에서 'LONG'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+c:\users\lee\desktop\minesweeper_winapi\minesweeper_winapi\block.cpp(24): warning C4244: '=': 'float'에서 'LONG'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+c:\users\lee\desktop\minesweeper_winapi\minesweeper_winapi\block.cpp(36): warning C4244: '인수': 'float'에서 'int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+c:\users\lee\desktop\minesweeper_winapi\minesweeper_winapi\block.cpp(38): warning C4244: '인수': 'float'에서 'int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+c:\users\lee\desktop\minesweeper_winapi\minesweeper_winapi\block.cpp(46): warning C4244: '인수': 'float'에서 'int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+c:\users\lee\desktop\minesweeper_winapi\minesweeper_winapi\block.cpp(48): warning C4244: '인수': 'float'에서 'int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+c:\users\lee\desktop\minesweeper_winapi\minesweeper_winapi\block.cpp(54): warning C4244: '인수': 'float'에서 'int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+c:\users\lee\desktop\minesweeper_winapi\minesweeper_winapi\block.cpp(60): warning C4244: '인수': 'float'에서 'int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+c:\users\lee\desktop\minesweeper_winapi\minesweeper_winapi\block.cpp(62): warning C4244: '인수': 'float'에서 'int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+  BlockFactory.cpp
+  GameManager.cpp
+c:\users\lee\desktop\minesweeper_winapi\minesweeper_winapi\gamemanager.cpp(26): warning C4244: '인수': 'double'에서 'int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+c:\users\lee\desktop\minesweeper_winapi\minesweeper_winapi\gamemanager.cpp(50): warning C4244: '인수': 'double'에서 'int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+c:\users\lee\desktop\minesweeper_winapi\minesweeper_winapi\gamemanager.cpp(122): warning C4244: '인수': 'float'에서 'int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+c:\users\lee\desktop\minesweeper_winapi\minesweeper_winapi\gamemanager.cpp(159): warning C4244: '인수': 'double'에서 'int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+c:\users\lee\desktop\minesweeper_winapi\minesweeper_winapi\gamemanager.cpp(163): warning C4244: '인수': 'double'에서 'int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+  Map.cpp
+c:\users\lee\desktop\minesweeper_winapi\minesweeper_winapi\map.cpp(24): warning C4244: '초기화 중': 'LONG'에서 'float'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+c:\users\lee\desktop\minesweeper_winapi\minesweeper_winapi\map.cpp(25): warning C4244: '초기화 중': 'LONG'에서 'float'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+c:\users\lee\desktop\minesweeper_winapi\minesweeper_winapi\map.cpp(27): warning C4244: '인수': 'float'에서 'int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+c:\users\lee\desktop\minesweeper_winapi\minesweeper_winapi\map.cpp(173): warning C4018: '<': signed 또는 unsigned가 일치하지 않습니다.
+c:\users\lee\desktop\minesweeper_winapi\minesweeper_winapi\map.cpp(188): warning C4018: '<': signed 또는 unsigned가 일치하지 않습니다.
+c:\users\lee\desktop\minesweeper_winapi\minesweeper_winapi\map.cpp(194): warning C4244: '인수': 'float'에서 'int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+c:\users\lee\desktop\minesweeper_winapi\minesweeper_winapi\map.cpp(216): warning C4018: '<': signed 또는 unsigned가 일치하지 않습니다.
+c:\users\lee\desktop\minesweeper_winapi\minesweeper_winapi\map.cpp(225): warning C4018: '<': signed 또는 unsigned가 일치하지 않습니다.
+c:\users\lee\desktop\minesweeper_winapi\minesweeper_winapi\map.cpp(234): warning C4018: '<': signed 또는 unsigned가 일치하지 않습니다.
+  MineMain.cpp
+  코드를 생성하고 있습니다...
+c:\users\lee\desktop\minesweeper_winapi\minesweeper_winapi\map.cpp(169): warning C4715: 'Map::MineNumber': 모든 제어 경로에서 값을 반환하지는 않습니다.
+c:\users\lee\desktop\minesweeper_winapi\minesweeper_winapi\map.cpp(212): warning C4715: 'Map::Collision': 모든 제어 경로에서 값을 반환하지는 않습니다.
+  Minesweeper_Winapi.vcxproj -> C:\Users\LEE\Desktop\Minesweeper_Winapi\Minesweeper_Winapi\Debug\Minesweeper_Winapi.exe
