@@ -70,7 +70,7 @@ void GameManager::Update()
 	{
 		m_Record.WinNum++;
 		m_Record.winrate = num;
-		if (m_SecTime < m_Record.bestSec)
+		if (m_SecTime < m_Record.bestSec || m_Record.bestSec == 0)
 		{
 			m_bBestSec = true;
 			m_Record.bestSec = m_SecTime;
@@ -83,6 +83,7 @@ void GameManager::Update()
 
 	if (m_eState == GAME_DIE)
 	{
+		m_FlagList.clear();
 		m_Record.winrate = num;
 		m_Map.OpenMine();
 		OutFile();
