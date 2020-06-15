@@ -2,6 +2,7 @@
 #include"resource.h"
 INT_PTR CALLBACK EndDlgProc(HWND hDlg, UINT uMsg, WPARAM wParam, LPARAM lParam);
 INT_PTR CALLBACK WinDlgProc(HWND hDlg, UINT uMsg, WPARAM wParam, LPARAM lParam);
+INT_PTR CALLBACK OptionDlgProc(HWND hDlg, UINT uMsg, WPARAM wParam, LPARAM lParam);
 LRESULT CALLBACK WndProc(HWND, UINT, WPARAM, LPARAM);
 HINSTANCE g_hInst;
 LPCTSTR lpszClass = TEXT("Áö·Ú Ã£±â");
@@ -86,6 +87,9 @@ LRESULT CALLBACK WndProc(HWND hWnd, UINT iMessage, WPARAM wParam, LPARAM lParam)
 		case ID_NEW:
 			g_game.ReStart(GAME_RESET);
 			break;
+		case ID_OPTION:
+			DialogBox(g_hInst, MAKEINTRESOURCE(IDD_DIALOG3), hWnd, OptionDlgProc);
+			break;
 		case ID_EXIT:
 			PostQuitMessage(0);
 		}
@@ -133,7 +137,7 @@ void SetText(HWND hDlg, GAMESTATE state)
 		wsprintf(str, TEXT("½Â·ü: %d%%"), g_game.GetRecord().winrate);
 		SetDlgItemText(hDlg, IDC_WINRATE2, str);
 
-		wsprintf(str, TEXT("ÃÖ°í ±â·Ï: %d%ÃÊ"), g_game.GetRecord().bestSec);
+		wsprintf(str, TEXT("ÃÖ°í ±â·Ï: %d%ÃÊ"), g_game.GetBestSec());
 		SetDlgItemText(hDlg, IDC_BEST, str);
 	}
 	else if (state == GAME_DIE)
@@ -150,6 +154,59 @@ void SetText(HWND hDlg, GAMESTATE state)
 		wsprintf(str, TEXT("½Â·ü: %d%%"), g_game.GetRecord().winrate);
 		SetDlgItemText(hDlg, IDC_WINRATE1, str);
 	}
+}
+
+INT_PTR CALLBACK OptionDlgProc(HWND hDlg, UINT uMsg, WPARAM wParam, LPARAM lParam)
+{
+	static LEVEL level;
+	static bool check;
+	static int Editnum;
+
+	EnableWindow(GetDlgItem(hDlg, IDC_MINETEXT), check);
+	EnableWindow(GetDlgItem(hDlg, IDC_EDIT1), check);
+	Editnum = GetDlgItemInt(hDlg, IDC_EDIT1, NULL, NULL);
+	switch (uMsg)
+	{
+	case WM_INITDIALOG:
+		CheckRadioButton(hDlg, IDC_RADIO1, IDC_RADIO4, IDC_RADIO1);
+		check = false;
+		return (INT_PTR)TRUE;
+	case WM_COMMAND:
+		switch (wParam)
+		{
+		case IDC_RADIO1:
+			level = BEGINNER;
+			check = false;
+			break;
+		case IDC_RADIO2:
+			level = INTERMEDIATE;
+			check = false;
+			break;
+		case IDC_RADIO3:
+			level = ADVANCED;
+			check = false;
+			break;
+		case IDC_RADIO4:
+			check = true;
+			level = CUSTOM;
+			break;
+		case IDOK:
+			if (level == CUSTOM)
+			{
+				if(Editnum > 400 || Editnum < 10)
+					return (INT_PTR)TRUE;
+				g_game.SetMinenum(Editnum);
+			}
+			g_game.Setlevel(level);
+			g_game.ReStart(GAME_RESET);
+			EndDialog(hDlg, 0);
+			return (INT_PTR)TRUE;
+		case IDCANCEL:
+			EndDialog(hDlg, 0);
+			return (INT_PTR)TRUE;
+		}
+	}
+	return(INT_PTR)FALSE;
 }
 
 INT_PTR CALLBACK EndDlgProc( HWND hDlg, UINT uMsg, WPARAM wParam, LPARAM lParam)

@@ -6,23 +6,62 @@ Map::Map()
 {
 }
 
-void Map::Init(int startX, int startY,HDC hdc)
+void Map::Init(int startX, int startY,HDC hdc,int minenum, LEVEL level)
 {
+	int sx = startX, sy = startY;
+
 	m_backbufferDC = hdc;
 	m_MineCheck = false;
 
-	m_iNoneCount = WIDTH* HEIGHT;
+	switch (level)
+	{
+	case BEGINNER:
+		sy *= 0.01;
+		sx *= 0.002;
+		break;
+	case INTERMEDIATE:
+		sy *= 0.03;
+		sx *= 0.013;
+		break;
+	case ADVANCED:
+		sy *= 0.04;
+		sx *= 0.02;
+		break;
+	case CUSTOM:
+		if (minenum == 10)
+		{
+			sy *= 0.01;
+			sx *= 0.002;
+		}
+		else if (minenum > 10 && minenum <= 40)
+		{
+			sy *= 0.03;
+			sx *= 0.013;
+		}
+		else if (minenum > 40)
+		{
+			sy *= 0.04;
+			sx *= 0.02;
+		}
+		break;
+	default:
+		break;
+	}
+
+	SetSize(level,minenum);
+
+	m_iNoneCount = m_iWidth * m_iHeight;
 	m_iMineCount = 0;
 
-	for (int x = 1; x <= WIDTH; x++)
+	for (int x = 1; x <= m_iWidth; x++)
 	{
-		for (int y = 1; y <= HEIGHT; y++)
+		for (int y = 1; y <= m_iHeight; y++)
 		{
 			Block* block;
 			block = m_pFactory->MakeNone();
 
-			float sizeX = startX + BitmapManager::GetSingleton()->GetImg(block->GetType())->GetSize().cx  * x ;
-			float sizeY = startY + BitmapManager::GetSingleton()->GetImg(block->GetType())->GetSize().cy * y;
+			float sizeX = sx + BitmapManager::GetSingleton()->GetImg(block->GetType())->GetSize().cx  * x ;
+			float sizeY = sy + BitmapManager::GetSingleton()->GetImg(block->GetType())->GetSize().cy * y;
 
 			block->Setpos(sizeX, sizeY);
 			block->SetRect();
@@ -30,15 +69,15 @@ void Map::Init(int startX, int startY,HDC hdc)
 		}
 	}
 
-	SetMine(startX, startY);
+	SetMine(sx, sy, minenum);
 }
 
-void Map::SetMine(int startX, int startY)
+void Map::SetMine(int startX, int startY, int minenum)
 {
-	while (m_iMineCount != DEFULTMINE)
+	while (m_iMineCount != minenum)
 	{
-		int randx = startX + BitmapManager::GetSingleton()->GetImg(IMG_MINE)->GetSize().cx * (rand() % WIDTH);
-		int randy = startY + BitmapManager::GetSingleton()->GetImg(IMG_MINE)->GetSize().cy * (rand() % HEIGHT);
+		int randx = startX + BitmapManager::GetSingleton()->GetImg(IMG_MINE)->GetSize().cx * (rand() % m_iWidth);
+		int randy = startY + BitmapManager::GetSingleton()->GetImg(IMG_MINE)->GetSize().cy * (rand() % m_iHeight);
 
 		if ((randx >= m_pMap.front()->GetPos().m_fX && randx <= m_pMap.back()->GetPos().m_fX)
 			&& (randy >= m_pMap.front()->GetPos().m_fY && randy <= m_pMap.back()->GetPos().m_fY))
@@ -52,6 +91,44 @@ void Map::SetMine(int startX, int startY)
 				m_iMineCount++;
 			}
 		}
+	}
+}
+
+void Map::SetSize(LEVEL level,int minenum)
+{
+	switch (level)
+	{
+	case BEGINNER:
+		m_iHeight = 10;
+		m_iWidth = 19;
+		break;
+	case INTERMEDIATE:
+		m_iHeight = 13;
+		m_iWidth = 25;
+		break;
+	case ADVANCED:
+		m_iHeight = 16;
+		m_iWidth = 30;
+		break;
+	case CUSTOM:
+		if (minenum == 10)
+		{
+			m_iHeight = 10;
+			m_iWidth = 19;
+		}
+		else if (minenum > 10 && minenum <= 40)
+		{
+			m_iHeight = 13;
+			m_iWidth = 25;
+		}
+		else if (minenum > 40)
+		{
+			m_iHeight = 16;
+			m_iWidth = 30;
+		}
+		break;
+	default:
+		break;
 	}
 }
 
@@ -222,13 +299,13 @@ void Map::CloseBlock()
 	}
 
 
-	m_iNoneCount = WIDTH * HEIGHT;
+	m_iNoneCount = m_iWidth * m_iHeight;
 
 }
 
 void Map::Render()
 {
-	BitmapManager::GetSingleton()->GetImg(IMG_BACK)->Draw(m_backbufferDC, 0, 0);
+
 	for (int i = 0; i < m_pMap.size(); i++)
 	{
 		m_pMap.at(i)->DrawBlock(m_backbufferDC);

@@ -11,6 +11,9 @@ class Map
 	int m_iMineCount;
 	bool m_MineCheck;
 
+	int m_iHeight;
+	int m_iWidth;
+
 	int sizeX, sizeY;
 
 
@@ -18,9 +21,9 @@ class Map
 	POS m_BlockPos;
 
 public:
-	void Init(int startX, int startY, HDC hdc);
-	void SetMine(int startX, int startY);
-
+	void Init(int startX, int startY, HDC hdc, int minenum, LEVEL level);
+	void SetMine(int startX, int startY, int minenum);
+	void SetSize(LEVEL level, int minenum);
 
 	void CheckBlock(int x, int y);
 	void ChageBlock(Block* block);

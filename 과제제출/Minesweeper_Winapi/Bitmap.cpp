@@ -37,6 +37,12 @@ void Bitmap::Draw(HDC hdc, int nX, int nY) //ÀüÃ¼
 	BitBlt(hdc, nX, nY, m_size.cx, m_size.cy, MemDC, 0, 0, SRCCOPY);
 }
 
+void Bitmap::Draw(HDC hdc, int nX, int nY, int w,int h) 
+{
+	SetStretchBltMode(hdc,COLORONCOLOR);
+	StretchBlt(hdc, nX, nY,w,h, MemDC, 0, 0, m_size.cx, m_size.cy, SRCCOPY);
+}
+
 
 void Bitmap::Release()
 {

@@ -4,6 +4,7 @@
 
 GameManager::GameManager()
 {
+	
 }
 
 void GameManager::Init(HWND hWnd)
@@ -15,7 +16,8 @@ void GameManager::Init(HWND hWnd)
 
 
 	m_iFlagCount = 0;
-	m_iMineCount = DEFULTMINE;
+	m_level = INTERMEDIATE;
+	SetMinenum();
 	m_SecTime = 0;
 	m_eState = GAME_WAIT;
 
@@ -24,14 +26,14 @@ void GameManager::Init(HWND hWnd)
 
 	inFile();
 	++m_Record.PlayNum;
-	m_Map.Init(m_ClientRct.right * 0.02 , m_ClientRct.bottom * 0.04,m_backbufferDC);
+	m_Map.Init(m_ClientRct.right  , m_ClientRct.bottom ,m_backbufferDC, m_iMineCount,m_level);
 
 }
 
 void GameManager::ReStart(GAMESTATE state)
 {
 	m_iFlagCount = 0;
-	m_iMineCount = DEFULTMINE;
+	SetMinenum();
 	m_SecTime = 0;
 	m_eState = GAME_WAIT;
 
@@ -48,12 +50,61 @@ void GameManager::ReStart(GAMESTATE state)
 	{
 		m_FlagList.clear();
 		m_Map.Release();
-		m_Map.Init(m_ClientRct.right * 0.02, m_ClientRct.bottom * 0.04, m_backbufferDC);
+		m_Map.Init(m_ClientRct.right , m_ClientRct.bottom , m_backbufferDC, m_iMineCount,m_level);
 	}
+}
+
+void GameManager::SetMinenum()
+{
+	RECT rt;
+
+	switch (m_level)
+	{
+	case BEGINNER:
+		m_iMineCount = 10;
+		m_iHeight = 320;
+		m_iWidth = 550;	
+		break;
+	case INTERMEDIATE:
+		m_iMineCount = 40;
+		m_iHeight = 418;
+		m_iWidth = 725;
+		break;
+	case ADVANCED:
+		m_iMineCount = 99;
+		m_iHeight = 512;
+		m_iWidth = 870;
+		break;
+	case CUSTOM:
+		if (m_iMineCount == 10)
+		{
+			m_iHeight = 320;
+			m_iWidth = 550;
+		}
+		else if (m_iMineCount > 10 && m_iMineCount <= 40)
+		{
+			m_iHeight = 418;
+			m_iWidth = 725;
+		}
+		else if (m_iMineCount > 40)
+		{
+			m_iHeight = 512;
+			m_iWidth = 870;
+		}
+		break;
+	default:
+		break;
+	}
+
+	SetRect(&rt, 0, 0, m_iWidth, m_iHeight);
+	AdjustWindowRect(&rt, WS_OVERLAPPEDWINDOW, FALSE);
+	SetWindowPos(m_hWnd, NULL, 0, 0, rt.right, rt.bottom + 50, SWP_NOMOVE | SWP_NOZORDER);
+	GetClientRect(m_hWnd, &m_ClientRct);
 }
 
 void GameManager::Update()
 {
+	
 	m_dwCurTime = GetTickCount();
 	m_fDeltaTime = (m_dwCurTime - m_dwLastTime) / 1000.0f;
 
@@ -70,13 +121,7 @@ void GameManager::Update()
 	{
 		m_Record.WinNum++;
 		m_Record.winrate = num;
-		if (m_SecTime < m_Record.bestSec || m_Record.bestSec == 0)
-		{
-			m_bBestSec = true;
-			m_Record.bestSec = m_SecTime;
-		}
-		else
-			m_bBestSec = false;
+		BestSec();
 		m_eState = GAME_WIN;
 		OutFile();
 	}
@@ -89,6 +134,50 @@ void GameManager::Update()
 		OutFile();
 	}
 	Render();
+}
+
+void GameManager::BestSec()
+{
+	m_bBestSec = false;
+
+	switch (m_level)
+	{
+	case BEGINNER:
+		if (m_SecTime < m_Record.bestSec.BeginnerSec || m_Record.bestSec.BeginnerSec == 0)
+		{
+			m_bBestSec = true;
+			m_Record.bestSec.BeginnerSec = m_SecTime;
+			m_ibestSec = m_Record.bestSec.BeginnerSec;
+		}
+		break;
+	case INTERMEDIATE:
+		if (m_SecTime < m_Record.bestSec.InterSec || m_Record.bestSec.InterSec == 0)
+		{
+			m_bBestSec = true;
+			m_Record.bestSec.InterSec = m_SecTime;
+			m_ibestSec = m_Record.bestSec.InterSec;
+		}
+		break;
+	case ADVANCED:
+		if (m_SecTime < m_Record.bestSec.AdvanSec || m_Record.bestSec.AdvanSec == 0)
+		{
+			m_bBestSec = true;
+			m_Record.bestSec.AdvanSec = m_SecTime;
+			m_ibestSec = m_Record.bestSec.AdvanSec;
+		}
+		break;
+	case CUSTOM:
+		if (m_SecTime < m_Record.bestSec.CustomSec || m_Record.bestSec.CustomSec == 0)
+		{
+			m_bBestSec = true;
+			m_Record.bestSec.CustomSec = m_SecTime;
+			m_ibestSec = m_Record.bestSec.CustomSec;
+		}
+		break;
+	default:
+		break;
+	}
+
 }
 
 GAMESTATE GameManager::StateCheck()
@@ -157,6 +246,7 @@ void GameManager::FlagRender()
 void GameManager::Render()
 {
 	HDC hdc = GetDC(m_hWnd);
+	BitmapManager::GetSingleton()->GetImg(IMG_BACK)->Draw(m_backbufferDC, 0, 0, m_iWidth, m_iHeight);
 	m_Map.Render();
 	FlagRender();
 	Text();
@@ -189,20 +279,15 @@ void GameManager::inFile()
 	{
 		while (!load.eof())
 		{
-			load >> m_Record.bestSec;
+			load >> m_Record.bestSec.BeginnerSec;
+			load >> m_Record.bestSec.InterSec;
+			load >> m_Record.bestSec.AdvanSec;
+			load >> m_Record.bestSec.CustomSec;
 			load >> m_Record.PlayNum;
 			load >> m_Record.WinNum;
 			load >> m_Record.winrate;
 		}
 	}
-	else
-	{
-		m_Record.bestSec = 0;
-		m_Record.PlayNum = 0;
-		m_Record.WinNum = 0;
-		m_Record.winrate = 0;
-	}
-
 
 }
 
@@ -212,7 +297,10 @@ void GameManager::OutFile()
 	save.open("Record.txt");
 	if (save.is_open())
 	{
-		save <<  m_Record.bestSec<<'\n';
+		save << m_Record.bestSec.BeginnerSec << '\n';
+		save << m_Record.bestSec.InterSec << '\n';
+		save << m_Record.bestSec.AdvanSec << '\n';
+		save << m_Record.bestSec.CustomSec << '\n';
 		save << m_Record.PlayNum << '\n';
 		save << m_Record.WinNum << '\n';
 		save << m_Record.winrate << '\n';

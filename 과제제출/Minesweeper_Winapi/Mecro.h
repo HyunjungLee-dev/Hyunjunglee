@@ -8,9 +8,6 @@
 using namespace std;
 
 
-#define DEFULTMINE 3
-#define HEIGHT 16
-#define WIDTH 30
 
 struct POS
 {
@@ -18,12 +15,28 @@ struct POS
 	float m_fY;
 };
 
+struct BestSec
+{
+	int BeginnerSec;
+	int InterSec;
+	int AdvanSec;
+	int CustomSec;
+};
+
 struct GameRecord
 {
-	int bestSec;
+	BestSec bestSec;
 	int PlayNum;
 	int WinNum;
 	int winrate;
+};
+
+enum LEVEL
+{
+	BEGINNER,
+	INTERMEDIATE,
+	ADVANCED,
+	CUSTOM
 };
 
 
