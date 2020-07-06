@@ -1,0 +1,130 @@
+﻿  BattleCityMain.cpp
+d:\github\std\hyunjunglee\과제제출\battle_city\battle_city\tank.h(40): warning C4244: '=': 'double'에서 'float'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+d:\github\std\hyunjunglee\과제제출\battle_city\battle_city\tank.h(41): warning C4244: '=': 'double'에서 'float'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+d:\github\std\hyunjunglee\과제제출\battle_city\battle_city\battlecitymain.cpp(64): warning C4101: 'hdc' :참조되지 않은 지역 변수입니다.
+d:\github\std\hyunjunglee\과제제출\battle_city\battle_city\battlecitymain.cpp(65): warning C4101: 'ps' :참조되지 않은 지역 변수입니다.
+  Bitmap.cpp
+d:\github\std\hyunjunglee\과제제출\battle_city\battle_city\bitmap.cpp(34): warning C4244: '인수': 'float'에서 'int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+d:\github\std\hyunjunglee\과제제출\battle_city\battle_city\bitmap.cpp(40): warning C4244: '인수': 'float'에서 'int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+  BitMapManager.cpp
+d:\github\std\hyunjunglee\과제제출\battle_city\battle_city\bitmapmanager.cpp(3): warning C4356: 'Singleton<BitMapManager>::_Singleton': 정적 데이터 멤버는 파생 클래스를 통해 초기화할 수 없습니다.
+d:\github\std\hyunjunglee\과제제출\battle_city\battle_city\bitmapmanager.cpp(67): warning C4101: 'str' :참조되지 않은 지역 변수입니다.
+d:\github\std\hyunjunglee\과제제출\battle_city\battle_city\bitmapmanager.cpp(99): warning C4101: 'str' :참조되지 않은 지역 변수입니다.
+  Bullet.cpp
+d:\github\std\hyunjunglee\과제제출\battle_city\battle_city\bullet.cpp(20): warning C4305: '초기화 중': 'double'에서 'float'(으)로 잘립니다.
+d:\github\std\hyunjunglee\과제제출\battle_city\battle_city\bullet.cpp(21): warning C4305: '초기화 중': 'double'에서 'float'(으)로 잘립니다.
+d:\github\std\hyunjunglee\과제제출\battle_city\battle_city\bullet.cpp(23): warning C4244: '=': 'double'에서 'float'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+d:\github\std\hyunjunglee\과제제출\battle_city\battle_city\bullet.cpp(24): warning C4244: '=': 'double'에서 'float'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+d:\github\std\hyunjunglee\과제제출\battle_city\battle_city\bullet.cpp(32): warning C4244: '=': 'double'에서 'float'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+d:\github\std\hyunjunglee\과제제출\battle_city\battle_city\bullet.cpp(33): warning C4244: '=': 'double'에서 'float'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+d:\github\std\hyunjunglee\과제제출\battle_city\battle_city\bullet.cpp(38): warning C4244: '=': 'double'에서 'float'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+d:\github\std\hyunjunglee\과제제출\battle_city\battle_city\bullet.cpp(39): warning C4244: '=': 'double'에서 'float'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+d:\github\std\hyunjunglee\과제제출\battle_city\battle_city\bullet.cpp(44): warning C4244: '=': 'double'에서 'float'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+d:\github\std\hyunjunglee\과제제출\battle_city\battle_city\bullet.cpp(45): warning C4244: '=': 'double'에서 'float'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+d:\github\std\hyunjunglee\과제제출\battle_city\battle_city\bullet.cpp(50): warning C4244: '=': 'double'에서 'float'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+d:\github\std\hyunjunglee\과제제출\battle_city\battle_city\bullet.cpp(51): warning C4244: '=': 'double'에서 'float'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+d:\github\std\hyunjunglee\과제제출\battle_city\battle_city\bullet.cpp(93): warning C4244: '=': 'float'에서 'int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+d:\github\std\hyunjunglee\과제제출\battle_city\battle_city\bullet.cpp(94): warning C4244: '=': 'float'에서 'int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+d:\github\std\hyunjunglee\과제제출\battle_city\battle_city\bullet.cpp(97): warning C4244: '=': 'float'에서 'int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+d:\github\std\hyunjunglee\과제제출\battle_city\battle_city\bullet.cpp(98): warning C4244: '=': 'float'에서 'int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+d:\github\std\hyunjunglee\과제제출\battle_city\battle_city\bullet.cpp(101): warning C4244: '=': 'float'에서 'int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+d:\github\std\hyunjunglee\과제제출\battle_city\battle_city\bullet.cpp(102): warning C4244: '=': 'float'에서 'int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+d:\github\std\hyunjunglee\과제제출\battle_city\battle_city\bullet.cpp(105): warning C4244: '=': 'float'에서 'int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+d:\github\std\hyunjunglee\과제제출\battle_city\battle_city\bullet.cpp(106): warning C4244: '=': 'float'에서 'int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+d:\github\std\hyunjunglee\과제제출\battle_city\battle_city\bullet.cpp(149): warning C4244: '=': 'float'에서 'int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+d:\github\std\hyunjunglee\과제제출\battle_city\battle_city\bullet.cpp(150): warning C4244: '=': 'float'에서 'int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+d:\github\std\hyunjunglee\과제제출\battle_city\battle_city\bullet.cpp(184): warning C4244: '초기화 중': 'float'에서 'int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+d:\github\std\hyunjunglee\과제제출\battle_city\battle_city\bullet.cpp(185): warning C4244: '초기화 중': 'float'에서 'int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+d:\github\std\hyunjunglee\과제제출\battle_city\battle_city\bullet.cpp(208): warning C4244: '인수': 'double'에서 'int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+d:\github\std\hyunjunglee\과제제출\battle_city\battle_city\bullet.cpp(212): warning C4244: '인수': 'double'에서 'int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+d:\github\std\hyunjunglee\과제제출\battle_city\battle_city\bullet.cpp(216): warning C4244: '인수': 'double'에서 'int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+d:\github\std\hyunjunglee\과제제출\battle_city\battle_city\bullet.cpp(220): warning C4244: '인수': 'double'에서 'int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+d:\github\std\hyunjunglee\과제제출\battle_city\battle_city\bullet.cpp(232): warning C4244: '인수': 'float'에서 'int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+  Enemy.cpp
+d:\github\std\hyunjunglee\과제제출\battle_city\battle_city\tank.h(40): warning C4244: '=': 'double'에서 'float'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+d:\github\std\hyunjunglee\과제제출\battle_city\battle_city\tank.h(41): warning C4244: '=': 'double'에서 'float'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+d:\github\std\hyunjunglee\과제제출\battle_city\battle_city\enemy.cpp(155): warning C4244: '=': 'int'에서 'float'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+  Font.cpp
+d:\github\std\hyunjunglee\과제제출\battle_city\battle_city\font.cpp(3): warning C4356: 'Singleton<Font>::_Singleton': 정적 데이터 멤버는 파생 클래스를 통해 초기화할 수 없습니다.
+  GameManager.cpp
+d:\github\std\hyunjunglee\과제제출\battle_city\battle_city\tank.h(40): warning C4244: '=': 'double'에서 'float'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+d:\github\std\hyunjunglee\과제제출\battle_city\battle_city\tank.h(41): warning C4244: '=': 'double'에서 'float'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+d:\github\std\hyunjunglee\과제제출\battle_city\battle_city\gamemanager.cpp(172): warning C4244: '=': 'double'에서 'int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+d:\github\std\hyunjunglee\과제제출\battle_city\battle_city\gamemanager.cpp(187): warning C4244: '인수': 'double'에서 'int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+d:\github\std\hyunjunglee\과제제출\battle_city\battle_city\gamemanager.cpp(188): warning C4244: '인수': 'double'에서 'int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+d:\github\std\hyunjunglee\과제제출\battle_city\battle_city\gamemanager.cpp(227): warning C4244: '인수': 'double'에서 'int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+d:\github\std\hyunjunglee\과제제출\battle_city\battle_city\gamemanager.cpp(254): warning C4244: '인수': 'double'에서 'int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+d:\github\std\hyunjunglee\과제제출\battle_city\battle_city\gamemanager.cpp(255): warning C4244: '인수': 'double'에서 'int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+d:\github\std\hyunjunglee\과제제출\battle_city\battle_city\gamemanager.cpp(258): warning C4244: '인수': 'double'에서 'int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+d:\github\std\hyunjunglee\과제제출\battle_city\battle_city\gamemanager.cpp(260): warning C4244: '인수': 'double'에서 'int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+d:\github\std\hyunjunglee\과제제출\battle_city\battle_city\gamemanager.cpp(262): warning C4244: '인수': 'double'에서 'int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+d:\github\std\hyunjunglee\과제제출\battle_city\battle_city\gamemanager.cpp(264): warning C4244: '인수': 'double'에서 'int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+d:\github\std\hyunjunglee\과제제출\battle_city\battle_city\gamemanager.cpp(266): warning C4305: '인수': 'double'에서 'float'(으)로 잘립니다.
+d:\github\std\hyunjunglee\과제제출\battle_city\battle_city\gamemanager.cpp(266): warning C4244: '인수': 'double'에서 'int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+d:\github\std\hyunjunglee\과제제출\battle_city\battle_city\gamemanager.cpp(268): warning C4244: '인수': 'double'에서 'int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+d:\github\std\hyunjunglee\과제제출\battle_city\battle_city\gamemanager.cpp(271): warning C4244: '인수': 'double'에서 'int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+d:\github\std\hyunjunglee\과제제출\battle_city\battle_city\gamemanager.cpp(274): warning C4244: '인수': 'double'에서 'int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+d:\github\std\hyunjunglee\과제제출\battle_city\battle_city\gamemanager.cpp(290): warning C4244: '인수': 'double'에서 'int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+d:\github\std\hyunjunglee\과제제출\battle_city\battle_city\gamemanager.cpp(327): warning C4244: '초기화 중': 'double'에서 'int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+d:\github\std\hyunjunglee\과제제출\battle_city\battle_city\gamemanager.cpp(328): warning C4244: '초기화 중': 'double'에서 'int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+d:\github\std\hyunjunglee\과제제출\battle_city\battle_city\gamemanager.cpp(608): warning C4267: '+=': 'size_t'에서 'int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+d:\github\std\hyunjunglee\과제제출\battle_city\battle_city\gamemanager.cpp(637): warning C4244: '초기화 중': 'float'에서 'int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+d:\github\std\hyunjunglee\과제제출\battle_city\battle_city\gamemanager.cpp(643): warning C4838: 'float'에서 'LONG'(으)로의 변환에는 축소 변환이 필요합니다.
+d:\github\std\hyunjunglee\과제제출\battle_city\battle_city\gamemanager.cpp(643): warning C4244: '초기화 중': 'float'에서 'LONG'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+d:\github\std\hyunjunglee\과제제출\battle_city\battle_city\gamemanager.cpp(684): warning C4305: '인수': 'double'에서 'float'(으)로 잘립니다.
+d:\github\std\hyunjunglee\과제제출\battle_city\battle_city\gamemanager.cpp(684): warning C4244: '인수': 'double'에서 'int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+d:\github\std\hyunjunglee\과제제출\battle_city\battle_city\gamemanager.cpp(690): warning C4244: '인수': 'double'에서 'int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+d:\github\std\hyunjunglee\과제제출\battle_city\battle_city\gamemanager.cpp(692): warning C4244: '인수': 'double'에서 'int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+d:\github\std\hyunjunglee\과제제출\battle_city\battle_city\gamemanager.cpp(697): warning C4244: '인수': 'double'에서 'int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+d:\github\std\hyunjunglee\과제제출\battle_city\battle_city\gamemanager.cpp(698): warning C4244: '인수': 'double'에서 'int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+d:\github\std\hyunjunglee\과제제출\battle_city\battle_city\gamemanager.cpp(701): warning C4244: '인수': 'double'에서 'int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+d:\github\std\hyunjunglee\과제제출\battle_city\battle_city\gamemanager.cpp(739): warning C4244: '인수': 'double'에서 'int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+d:\github\std\hyunjunglee\과제제출\battle_city\battle_city\gamemanager.cpp(741): warning C4244: '인수': 'double'에서 'int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+d:\github\std\hyunjunglee\과제제출\battle_city\battle_city\gamemanager.cpp(782): warning C4244: '인수': 'double'에서 'int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+d:\github\std\hyunjunglee\과제제출\battle_city\battle_city\gamemanager.cpp(793): warning C4244: '=': 'double'에서 'int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+d:\github\std\hyunjunglee\과제제출\battle_city\battle_city\gamemanager.cpp(794): warning C4244: '=': 'double'에서 'int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+d:\github\std\hyunjunglee\과제제출\battle_city\battle_city\gamemanager.cpp(848): warning C4244: '인수': 'double'에서 'int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+d:\github\std\hyunjunglee\과제제출\battle_city\battle_city\gamemanager.cpp(849): warning C4244: '인수': 'double'에서 'int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+d:\github\std\hyunjunglee\과제제출\battle_city\battle_city\gamemanager.cpp(854): warning C4244: '인수': 'double'에서 'int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+d:\github\std\hyunjunglee\과제제출\battle_city\battle_city\gamemanager.cpp(857): warning C4244: '인수': 'double'에서 'int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+d:\github\std\hyunjunglee\과제제출\battle_city\battle_city\gamemanager.cpp(859): warning C4244: '인수': 'double'에서 'int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+d:\github\std\hyunjunglee\과제제출\battle_city\battle_city\gamemanager.cpp(866): warning C4244: '인수': 'double'에서 'int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+  Item.cpp
+d:\github\std\hyunjunglee\과제제출\battle_city\battle_city\item.cpp(16): warning C4244: '=': 'int'에서 'float'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+d:\github\std\hyunjunglee\과제제출\battle_city\battle_city\item.cpp(17): warning C4244: '=': 'int'에서 'float'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+d:\github\std\hyunjunglee\과제제출\battle_city\battle_city\item.cpp(44): warning C4244: '인수': 'float'에서 'int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+d:\github\std\hyunjunglee\과제제출\battle_city\battle_city\item.cpp(54): warning C4305: '인수': 'double'에서 'float'(으)로 잘립니다.
+d:\github\std\hyunjunglee\과제제출\battle_city\battle_city\item.cpp(54): warning C4244: '인수': 'float'에서 'int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+  Maptool.cpp
+d:\github\std\hyunjunglee\과제제출\battle_city\battle_city\maptool.cpp(4): warning C4356: 'Singleton<Maptool>::_Singleton': 정적 데이터 멤버는 파생 클래스를 통해 초기화할 수 없습니다.
+d:\github\std\hyunjunglee\과제제출\battle_city\battle_city\maptool.cpp(31): warning C4244: '=': 'int'에서 'float'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+d:\github\std\hyunjunglee\과제제출\battle_city\battle_city\maptool.cpp(32): warning C4244: '=': 'int'에서 'float'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+d:\github\std\hyunjunglee\과제제출\battle_city\battle_city\maptool.cpp(81): warning C4244: '초기화 중': 'float'에서 'int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+d:\github\std\hyunjunglee\과제제출\battle_city\battle_city\maptool.cpp(127): warning C4244: '인수': 'float'에서 'int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+d:\github\std\hyunjunglee\과제제출\battle_city\battle_city\maptool.cpp(143): warning C4244: '인수': 'float'에서 'int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+d:\github\std\hyunjunglee\과제제출\battle_city\battle_city\maptool.cpp(170): warning C4244: '인수': 'float'에서 'int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+d:\github\std\hyunjunglee\과제제출\battle_city\battle_city\maptool.cpp(354): warning C4244: '인수': 'double'에서 'int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+  Player.cpp
+d:\github\std\hyunjunglee\과제제출\battle_city\battle_city\tank.h(40): warning C4244: '=': 'double'에서 'float'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+d:\github\std\hyunjunglee\과제제출\battle_city\battle_city\tank.h(41): warning C4244: '=': 'double'에서 'float'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+  Tank.cpp
+d:\github\std\hyunjunglee\과제제출\battle_city\battle_city\tank.h(40): warning C4244: '=': 'double'에서 'float'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+d:\github\std\hyunjunglee\과제제출\battle_city\battle_city\tank.h(41): warning C4244: '=': 'double'에서 'float'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+d:\github\std\hyunjunglee\과제제출\battle_city\battle_city\tank.cpp(23): warning C4305: '인수': 'double'에서 'float'(으)로 잘립니다.
+d:\github\std\hyunjunglee\과제제출\battle_city\battle_city\tank.cpp(23): warning C4244: '인수': 'float'에서 'int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+d:\github\std\hyunjunglee\과제제출\battle_city\battle_city\tank.cpp(50): warning C4244: '인수': 'float'에서 'int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+d:\github\std\hyunjunglee\과제제출\battle_city\battle_city\tank.cpp(51): warning C4244: '인수': 'float'에서 'int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+d:\github\std\hyunjunglee\과제제출\battle_city\battle_city\tank.cpp(98): warning C4244: '인수': 'float'에서 'int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+d:\github\std\hyunjunglee\과제제출\battle_city\battle_city\tank.cpp(123): warning C4244: '인수': 'double'에서 'int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+d:\github\std\hyunjunglee\과제제출\battle_city\battle_city\tank.cpp(132): warning C4244: '인수': 'float'에서 'int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+d:\github\std\hyunjunglee\과제제출\battle_city\battle_city\tank.cpp(212): warning C4244: '=': 'float'에서 'int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+d:\github\std\hyunjunglee\과제제출\battle_city\battle_city\tank.cpp(213): warning C4244: '=': 'double'에서 'int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+d:\github\std\hyunjunglee\과제제출\battle_city\battle_city\tank.cpp(214): warning C4244: '=': 'double'에서 'int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+d:\github\std\hyunjunglee\과제제출\battle_city\battle_city\tank.cpp(216): warning C4244: '=': 'float'에서 'int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+d:\github\std\hyunjunglee\과제제출\battle_city\battle_city\tank.cpp(217): warning C4244: '=': 'double'에서 'int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+d:\github\std\hyunjunglee\과제제출\battle_city\battle_city\tank.cpp(218): warning C4244: '=': 'double'에서 'int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+d:\github\std\hyunjunglee\과제제출\battle_city\battle_city\tank.cpp(209): warning C4101: 'tmp' :참조되지 않은 지역 변수입니다.
+  코드를 생성하고 있습니다...
+d:\github\std\hyunjunglee\과제제출\battle_city\battle_city\tank.cpp(328): warning C4715: 'Tank::Movable': 모든 제어 경로에서 값을 반환하지는 않습니다.
+d:\github\std\hyunjunglee\과제제출\battle_city\battle_city\maptool.cpp(270): warning C4715: 'Maptool::Collision': 모든 제어 경로에서 값을 반환하지는 않습니다.
+  Battle_City.vcxproj -> D:\Github\STD\Hyunjunglee\과제제출\Battle_City\x64\Debug\Battle_City.exe

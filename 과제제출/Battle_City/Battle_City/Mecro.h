@@ -1,0 +1,196 @@
+#pragma once
+#include <Windows.h>
+#include <stdlib.h>
+#include <time.h>
+#include<vector>
+#include<queue>
+#include<math.h>
+#include<list>
+#include"Singleton.h"
+#define PI 3.141592
+using namespace std;
+
+
+#define TILESIZEX 33
+#define TILESIZEY 25
+#define TILEX 13
+#define TILEY 13
+
+#define STARTX	 15
+#define STARTY	 40
+
+#define MAXSTAGE 3
+
+
+
+
+
+enum MAP
+{
+	MAPWIDTH = 13,
+	MAPHEIGHT = 13,
+
+	MAP_NONE = -1,
+
+	MAP_BLOCK,
+	MAP_BLOCKT,
+	MAP_BLOCKL,
+	MAP_BLOCKB,
+	MAP_BLOCKR,
+
+	MAP_ICE,
+
+	MAP_FOREST,
+
+	MAP_RIVER,
+
+	MAP_GBLOCK,
+	MAP_GBLOCKT,
+	MAP_GBLOCKL,
+	MAP_GBLOCKB,
+	MAP_GBLOCKR,
+
+	MAP_EAGLE,
+	MAP_ENDFALGE,
+	MAP_END
+
+};
+
+enum TANK
+{
+	TANK_START = 0,
+
+	T_ENUMY_UP_0 = 0,
+	T_ENUMY_UP_1,
+	T_ENUMY_RED_UP,
+
+
+	T_ENUMY_LT_0,
+	T_ENUMY_LT_1,
+	T_ENUMY_RED_LT,
+
+	T_ENUMY_DN_0,
+	T_ENUMY_DN_1,
+	T_ENUMY_RED_DN,
+
+	T_ENUMY_RT_0,
+	T_ENUMY_RT_1,
+	T_ENUMY_RED_RT,
+
+
+	T_PLAYER_UP_0,
+	T_PLAYER_UP_1,
+	T_PLAYER_RT_0,
+	T_PLAYER_RT_1,
+	T_PLAYER_DN_0,
+	T_PLAYER_DN_1,
+	T_PLAYER_LT_0,
+	T_PLAYER_LT_1,
+
+	TANK_END
+};
+
+enum OBJECT
+{
+	OBJE_START = 0,
+	OBJE_ENEMY = 0,
+
+	OBJE_EXPLOSION00,
+	OBJE_EXPLOSION01,
+	OBJE_EXPLOSION02,
+	OBJE_EXPLOSION03,
+	OBJE_EXPLOSION04,
+
+	OBJE_BULLETL,
+	OBJE_BULLETU,
+	OBJE_BULLETD,
+	OBJE_BULLETR,
+
+	OBJE_PLAYER,
+	OBJE_SHIELD00,
+	OBJE_SHIELD01,
+	OBJE_STAGE,
+	OBJE_TITLE,
+	OBJE_APPEAR0,
+	OBJE_APPEAR1,
+	OBJE_APPEAR2,
+	OBJE_APPEAR3,
+	OBJE_SCORE,
+	OBJE_GAMEOVER,
+	OBJE_END
+};
+
+enum ITEM
+{
+	ITEM_CHECK = -2,
+	ITEM_NONE = -1,
+	ITEM_START = 0,
+
+	ITEM_BOMB,
+	ITEM_CLOCK,
+	ITEM_HELMET,
+	ITEM_SHOVEL,
+	ITEM_TANK,
+
+	ITEM_END
+};
+
+enum GAMESTATE
+{
+	GAMEWAIT,
+	GAMESTAGE,
+	GAMESTART,
+	GAMEPLAY,
+	GAMCONSTRUCTION,
+	GAMEOVER,
+	GAMEWIN,
+	GAMERESTART,
+	GAMENEXT,
+	GAMEEND,
+};
+
+enum TANKSTATE
+{
+	TANKAPPEAR,
+	TANKSHIELD,
+	TANKMOVE,
+	TANKEXSPLOSION,
+	TANKNONE
+};
+
+enum TYPE
+{
+	TYPEENEMY,
+	TYPEITEM_ENEMY,
+	TYPEPLAYER,
+	TYPETANK,
+	TYPEWALL,
+};
+
+enum DIRECTION
+{
+	UP,
+	DOWN,
+	LEFT,
+	RIGHT,
+	NONE
+};
+
+struct Tile
+{
+	float fX;
+	float fY;
+	float fSizeX;
+	float fSizeY;
+
+	int eTileID;
+
+	RECT Rct;
+};
+
+struct POS
+{
+	float m_iX;
+	float m_iY;
+};
+
