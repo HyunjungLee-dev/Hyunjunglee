@@ -23,7 +23,7 @@
     <ProjectGuid>{1262D579-82A4-4F87-84D4-51A423BBEA5B}</ProjectGuid>
     <Keyword>Win32Proj</Keyword>
     <RootNamespace>ModuGame</RootNamespace>
-    <WindowsTargetPlatformVersion>10.0.18362.0</WindowsTargetPlatformVersion>
+    <WindowsTargetPlatformVersion>10.0.17763.0</WindowsTargetPlatformVersion>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
@@ -141,10 +141,14 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClInclude Include="Animal.h" />
+    <ClInclude Include="AnimalManager.h" />
     <ClInclude Include="Bullet.h" />
     <ClInclude Include="defines.h" />
+    <ClInclude Include="GameBase.h" />
     <ClInclude Include="LoadingScene.h" />
     <ClInclude Include="NameScene.h" />
+    <ClInclude Include="Object.h" />
     <ClInclude Include="PaperGameScene.h" />
     <ClInclude Include="FlightGameScene.h" />
     <ClInclude Include="RankScene.h" />
@@ -152,10 +156,15 @@
     <ClInclude Include="Star.h" />
     <ClInclude Include="TitleScene.h" />
     <ClInclude Include="UserManager.h" />
+    <ClInclude Include="MoleScene.h" />
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="Animal.cpp" />
+    <ClCompile Include="AnimalManager.cpp" />
+    <ClCompile Include="GameBase.cpp" />
     <ClCompile Include="LoadingScene.cpp" />
     <ClCompile Include="NameScene.cpp" />
+    <ClCompile Include="Object.cpp" />
     <ClCompile Include="PaperGameScene.cpp" />
     <ClCompile Include="Main.cpp" />
     <ClCompile Include="FlightGameScene.cpp" />
@@ -163,6 +172,7 @@
     <ClCompile Include="SelectScene.cpp" />
     <ClCompile Include="TitleScene.cpp" />
     <ClCompile Include="UserManager.cpp" />
+    <ClCompile Include="MoleScene.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ResourceCompile Include="ModuGame.rc" />

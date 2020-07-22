@@ -14,6 +14,7 @@
 		int AllScore;
 		int PaperScore;
 		int FlightScore;
+		int MoleScore;
 
 		JEngine::BitMap*	m_pUser;
 		JEngine::Label*		m_pLabelName;
@@ -23,11 +24,13 @@
 
 		void SetUser(GAME type, int num)
 		{
-			if (type == FLIGHT)
+			if (type == FLIGHTGAME)
 				FlightScore = num;
-			else if (type == PAPER)
+			else if (type == PAPERGAME)
 				PaperScore = num;
-			AllScore = PaperScore + FlightScore;
+			else if (type == MOLEGAME)
+				MoleScore = num;
+			AllScore = PaperScore + FlightScore + MoleScore;
 		}
 
 		void Draw(int x, int y)

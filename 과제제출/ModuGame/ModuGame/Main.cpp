@@ -7,11 +7,11 @@
 #include"PaperGameScene.h"
 #include"NameScene.h"
 #include"RankScene.h"
+#include"MoleScene.h"
 #include <crtdbg.h> 
 #include <time.h>
 #include"UserManager.h"
 #include"defines.h"
-
 
 
 
@@ -28,6 +28,7 @@ int APIENTRY WinMain(HINSTANCE hInstance, HINSTANCE hPrevInstance, LPSTR lpszCmd
 	JEngine::SceneManager::GetInstance()->RegistScene(new FlightGameScene);
 	JEngine::SceneManager::GetInstance()->RegistScene(new NameScene);
 	JEngine::SceneManager::GetInstance()->RegistScene(new RankScene);
+	JEngine::SceneManager::GetInstance()->RegistScene(new MoleScene);
 
 
 	//엔진 시작
